@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpha</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__content">
+        <button class="header__btn burger btn-reset" onclick="openNav(this)">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+        <nav class="header__nav">
+          <ul class="header__items list-reset">
+            <li class="header__item">
+              <a class="header__link" href="#about">
+                ГЛАВНАЯ
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#baths">
+                ДОМА
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#baths">
+                БАНИ
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__logo logo">
+          <a class="logo__link" href="#">
+            <img class="logo__img" src="img/logoOne.svg" alt="Логотип">
+          </a>
+        </div>
+        <div class="header__group tel">
+          <a class="tel__link" href="tel:+78126037222">8 (812) 603-72-22</a>
+          <a class="tel__link" href="tel:+74993807733">8 (499) 380-77-33</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="main__section section hero" id="hero">
+      <div class="hero__container container">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            &laquo;Пестовский Лесокомбинат&raquo;
+          </h1>
+          <p class="hero__desc">
+            Cтань частью нашей команды!
+          </p>
+          <button class="hero__btn btn btn-reset" id="questionnaire" onclick="openForm()">
+            ОТПРАВИТЬ АНКЕТУ
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="about__section about section" id="about">
+      <div class="about__container container">
+        <div class="about__content">
+          <h2 class="about__title title">
+            о компании
+          </h2>
+          <ul class="about__items list-reset">
+            <li class="about__item">
+              <a class="about__link" href="#">2</a>
+              <p class="about__desc">
+                Города присутствия: Санкт-Петербург и Москва
+              </p>
+            </li>
+            <li class="about__item">
+              <a class="about__link" href="#">>30</a>
+              <p class="about__desc">
+                Лет среди лидеров рынка
+              </p>
+            </li>
+            <li class="about__item">
+              <a class="about__link" href="#">100</a>
+              <p class="about__desc">
+                Домов и бань сдаём ежегодно
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="choice__section section choice">
+      <div class="choice__container container">
+        <div class="choice__content">
+          <h2 class="choice__title title">
+            Выбери подразделение:
+          </h2>
+          <ul class="choice__items list-reset">
+            <li class="choice__item">
+              <button class="choice__btn choice__btn--active btn-reset choice__btn--builder">
+                Строительный отдел
+              </button>
+            </li>
+            <li class="choice__item">
+              <button class="choice__btn btn-reset">
+                офис
+              </button>
+            </li>
+            <li class="choice__item">
+              <button class="choice__btn btn-reset">
+                финансовый отдел
+              </button>
+            </li>
+            <li class="choice__item">
+              <button class="choice__btn btn-reset">
+                Отдел продаж
+              </button>
+            </li>
+            <li class="choice__item">
+              <button class="choice__btn btn-reset">
+                внештатный сотрудник
+              </button>
+            </li>
+          </ul>
+          <div class="choice__list-box">
+            <ul class="choice__list choice__list--active list-reset profession builder">
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Прораб
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Специалист службы снабжения
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Логист
+                </h3>
+                <p class="profession__desc">
+                  Обсуждается на собеседовании
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Проектировщик
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="choice__list list-reset profession office">
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Секретарь
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Отдел кадров
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Секретарь
+                </h3>
+                <p class="profession__desc">
+                  Обсуждается на собеседовании
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Секретарь
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="choice__list list-reset profession financial">
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  бухгалтерия
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset info__list">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  бухгалтерия
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  бухгалтерия
+                </h3>
+                <p class="profession__desc">
+                  Обсуждается на собеседовании
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  бухгалтерия
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="choice__list list-reset profession Sales">
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Продажи
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset info__list">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Специалист Продажи
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Продажи
+                </h3>
+                <p class="profession__desc">
+                  Обсуждается на собеседовании
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Продажи
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="choice__list list-reset profession freelance">
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Bнештатный
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Bнештатный cпециалист
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Bнештатный
+                </h3>
+                <p class="profession__desc">
+                  Обсуждается на собеседовании
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="profession__item">
+                <h3 class="profession__name">
+                  Bнештатный
+                </h3>
+                <p class="profession__desc">
+                  ОТ 00 000 руб
+                </p>
+                <button class="profession__btn btn-reset profession-close">
+                  <span class="profession-close__line"></span>
+                  <span class="profession-close__line"></span>
+                </button>
+                <div class="profession__info info">
+                  <ul class="info__list list-reset">
+                    <li>
+                      <p class="info__subtitle">Задачи:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Наши ожидания:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          описание
+                        </li>
+                        <li class="info__item">
+                          описание
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="info__subtitle">Мы предлагаем:</p>
+                      <ul class="info__items">
+                        <li class="info__item">
+                          график 5/2 с гибким началом рабочего дня;
+                        </li>
+                        <li class="info__item">
+                          оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;
+                        </li>
+                        <li class="info__item">
+                          ежеквартальную премию по итогам работы;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="choice__box-btn">
+            <button class="choice__button btn-reset btn">
+              откликнуться на&nbsp;вакансию
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="advantages__section section advantages">
+      <div class="advantages__container container">
+        <div class="advantages__content">
+          <h2 class="advantages__title title">
+            Преимущества Компании
+          </h2>
+          <ul class="advantages__items list-reset">
+            <li class="advantages__item">
+              <div class="advantages__top-box">
+                <h3 class="advantages__subject">
+                  Качество продукта
+                </h3>
+                <button class="advantages__btn btn-reset advantages-close">
+                  <span class="advantages-close__line"></span>
+                  <span class="advantages-close__line"></span>
+                </button>
+              </div>
+              <div class="advantages__bottom-box">
+                <p class="advantages__desc">
+                  Мы&nbsp;гордимся результатами своей работы! Мы&nbsp;убеждены, что именно качество&nbsp;&mdash; это самое главное, это&nbsp;то, что даёт Нам уверенность в&nbsp;завтрашнем дне.
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__top-box">
+                <h3 class="advantages__subject">
+                  Популярность бренда в сети
+                </h3>
+                <button class="advantages__btn btn-reset advantages-close">
+                  <span class="advantages-close__line"></span>
+                  <span class="advantages-close__line"></span>
+                </button>
+              </div>
+              <div class="advantages__bottom-box">
+                <p class="advantages__desc">
+                  Мы&nbsp;занимаем высокие позиции в&nbsp;поисковой выдаче и&nbsp;имеем многочисленные отзывы, привлекающие новых заказчиков независимо от&nbsp;времени года.
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__top-box">
+                <h3 class="advantages__subject">
+                  Передовое рабочее место
+                </h3>
+                <button class="advantages__btn btn-reset advantages-close">
+                  <span class="advantages-close__line"></span>
+                  <span class="advantages-close__line"></span>
+                </button>
+              </div>
+              <div class="advantages__bottom-box">
+                <p class="advantages__desc">
+                  Комфортный офис в&nbsp;центре&nbsp;г. Санкт-Петербург, оборудованный передовыми технологиями. Твой рабочий компьютер может быть даже в&nbsp;твоём смартфоне!
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__top-box">
+                <h3 class="advantages__subject">
+                  Свои автоматизированные системы обучения
+                </h3>
+                <button class="advantages__btn btn-reset advantages-close">
+                  <span class="advantages-close__line"></span>
+                  <span class="advantages-close__line"></span>
+                </button>
+              </div>
+              <div class="advantages__bottom-box">
+                <p class="advantages__desc">
+                  Создали и&nbsp;постоянно улучшаем собственные автоматизированные системы обучения специалистов и&nbsp;повышения их&nbsp;квалификации внутри компании.
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__top-box">
+                <h3 class="advantages__subject">
+                  Сотрудничество c ведущими Компаниями рынка
+                </h3>
+                <button class="advantages__btn btn-reset advantages-close">
+                  <span class="advantages-close__line"></span>
+                  <span class="advantages-close__line"></span>
+                </button>
+              </div>
+              <div class="advantages__bottom-box">
+                <p class="advantages__desc">
+                  Сотрудничаем с&nbsp;ведущими Компаниями рынка строительных материалов: &laquo;Grand Line&raquo;, &laquo;Петрович&raquo;, &laquo;Окна Петербурга&raquo;, &laquo;КраскиДоски&raquo;, &laquo;Technonicol&raquo; и&nbsp;другими.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="products__section section products" id="baths">
+      <div class="products__container container">
+        <div class="products__content">
+          <h2 class="products__title title">
+            продукты компании
+          </h2>
+          <div class="products__btn-topic">
+            <button class="products__btn btn-reset products__btn--active">
+              БАНИ
+            </button>
+            <button class="products__btn btn-reset">
+              ДОМА
+            </button>
+          </div>
+          <div class="products__box">
+            <div class="products__one products__items-box products__items-box--active swiper bathsSwiper ">
+              <ul class="products__items list-reset baths swiper-wrapper">
+                <li class="products__item swiper-slide"></li>
+                <li class="products__item swiper-slide"></li>
+                <li class="products__item swiper-slide"></li>
+                <li class="products__item swiper-slide"></li>
+                <li class="products__item swiper-slide"></li>
+              </ul>
+              <button class="products__button-next btn-reset swiper-button-next"></button>
+              <button class="products__button-prev btn-reset swiper-button-prev"></button>
+              <div class="products__pagination swiper-pagination"></div>
+            </div>
+            <div class="products__two products__items-box swiper homeSwiper">
+              <ul class="products__items list-reset home swiper-wrapper">
+                <li class="products__item swiper-slide"></li>
+                <li class="products__item swiper-slide"></li>
+                <li class="products__item swiper-slide"></li>
+                <li class="products__item swiper-slide"></li>
+                <li class="products__item swiper-slide"></li>
+              </ul>
+              <button class="products__button-next btn-reset swiper-button-next"></button>
+              <button class="products__button-prev btn-reset swiper-button-prev"></button>
+              <div class="products__pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="career__section section career">
+      <div class="career__container container">
+        <div class="career__content">
+          <h2 class="career__title title">
+            Карьерный рост
+          </h2>
+          <div class="career__desc-grup">
+            <p class="career__desc">
+              Наша Компания является ярким примером, где достойные люди смело и&nbsp;заслуженно поднимаются по&nbsp;карьерной лестнице.
+            </p>
+            <p class="career__desc">
+              Мы&nbsp;ценим стремление к&nbsp;развитию и&nbsp;предоставляем все необходимые для этого условия.
+            </p>
+          </div>
+          <div class="career__swiper-box swiper careerSwiper">
+            <ul class="career__items list-reset swiper-wrapper">
+              <li class="career__item swiper-slide">
+                <div class="career__person person">
+                  <img class="person__img" src="img/person/Oleg360.webp" alt="Олег Воробьёв">
+                  <h3 class="person__title">Олег Воробьёв</h3>
+                  <p class="person__desc">Прораб</p>
+                  <ul class="person__items list-reset">
+                    <li class="person__item">
+                      <p class="person__desc">
+                        В&nbsp;Компании с&nbsp;2018&nbsp;года. Начал с&nbsp;позиции плотника в&nbsp;строительной бригаде.
+                      </p>
+                    </li>
+                    <li class="person__item">
+                      <p class="person__desc">
+                        В&nbsp;течение года работы Олег стал бригадиром и&nbsp;был приглашён в&nbsp;офис Компании на&nbsp;должность штатного Производителя строительных работ.
+                      </p>
+                    </li>
+                    <li class="person__item">
+                      <p class="person__desc">
+                        На&nbsp;данный момент в&nbsp;Его подчинении находятся 9&nbsp;строительных бригад. Олег вносит весомый вклад в&nbsp;итоговый результат Компании, а&nbsp;это реализация 100 объектов в&nbsp;год!
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="career__item swiper-slide">
+                <div class="career__person person">
+                  <img class="person__img" src="img/person/Danil360.webp" alt="Даниил Басенков">
+                  <h3 class="person__title">Даниил Басенков</h3>
+                  <p class="person__desc">Менеджер по&nbsp;снабжению</p>
+                  <ul class="person__items list-reset">
+                    <li class="person__item">
+                      <p class="person__desc">
+                        В&nbsp;декабре 2018 года заступил на&nbsp;должность Менеджера отдела продаж.
+                      </p>
+                    </li>
+                    <li class="person__item">
+                      <p class="person__desc">
+                        После 9&nbsp;месяцев стабильных результатов, зарекомендовав себя как надёжный сотрудник, получил ответственную должность Логиста.
+                      </p>
+                    </li>
+                    <li class="person__item">
+                      <p class="person__desc">
+                        Через год Даниил занял должность Специалиста службы снабжения, взяв на&nbsp;себя помимо закупа материала ещё и&nbsp;крайне важную роль Сметчика.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="career__item swiper-slide">
+                <div class="career__person person">
+                  <img class="person__img" src="img/person/Mariy360.webp" alt="Мария Обухова">
+                  <h3 class="person__title">Мария Обухова</h3>
+                  <p class="person__desc">Руководитель финансовой службы</p>
+                  <ul class="person__items list-reset">
+                    <li class="person__item">
+                      <p class="person__desc">
+                        В&nbsp;декабре 2018 года заступил на&nbsp;должность Менеджера отдела продаж.
+                      </p>
+                    </li>
+                    <li class="person__item">
+                      <p class="person__desc">
+                        После 9&nbsp;месяцев стабильных результатов, зарекомендовав себя как надёжный сотрудник, получил ответственную должность Логиста.
+                      </p>
+                    </li>
+                    <li class="person__item">
+                      <p class="person__desc">
+                        Через год Даниил занял должность Специалиста службы снабжения, взяв на&nbsp;себя помимо закупа материала ещё и&nbsp;крайне важную роль Сметчика.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <button class="swiper-button-next btn-reset"></button>
+            <button class="swiper-button-prev btn-reset"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="successes__section section successes">
+      <div class="successes__container container">
+        <div class="successes__content">
+          <h2 class="successes__title">
+            Наши успехи
+          </h2>
+          <div class="successes__top">
+            <p class="successes__desc">
+              Наши успехи&nbsp;&mdash; это заслуга замечательных людей, работающих в&nbsp;нашей Команде.
+            </p>
+            <p class="successes__desc">
+              У&nbsp;Нас всегда есть вакансии для сильных кандидатов
+            </p>
+          </div>
+          <div class="successes__bottom">
+            <p class="successes__desc-two">
+              Если чувствуешь в&nbsp;Себе потенциал и&nbsp;здоровые амбиции&nbsp;&mdash; ждём рядом с&nbsp;Нами!
+            </p>
+            <button class="successes__btn btn-reset btn">
+              Присоединиться к&nbsp;команде
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts__section section contacts">
+      <div class="contacts__container container">
+        <div class="contacts__content">
+          <h2 class="contacts__title title">КОНТАКТЫ</h2>
+          <div class="contacts__top">
+            <button class="contacts__btn btn-reset contacts__btn--active">
+              САНКТ-ПЕТЕРБУРГ
+            </button>
+            <button class="contacts__btn btn-reset">
+              МОСКВА
+            </button>
+          </div>
+          <div class="contacts__average-box">
+            <div class="contacts__average spb contacts__average--active">
+              <ul class="contacts__items list-reset">
+                <li class="contacts__item">
+                  <a class="contacts__link tel" href="tel:+78126027760">8 (812) 602-77-60</a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link email" href="mailto:info@pplk.ru">info@pplk.ru</a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link address" href="#">
+                    ул. Заозёрная, д.&nbsp;8&nbsp;к.&nbsp;2, офис 202 (7&nbsp;мин. пешком от&nbsp;метро Фрунзенская)
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__average msc">
+              <ul class="contacts__items list-reset">
+                <li class="contacts__item">
+                  <a class="contacts__link tel" href="tel:+78126027760">8 (812) 602-88-46</a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link email" href="mailto:info@pplk.ru">info@pplk.ru</a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link address" href="#">
+                    ул. Заозёрная, д.&nbsp;8&nbsp;к.&nbsp;2, офис 202 (7&nbsp;мин. пешком от&nbsp;метро Фрунзенская)
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="contacts__bottom">
+            <ul class="contacts__list list-reset">
+              <li class="contacts__sheet">
+                <a class="contacts__link-bottom" href="#">
+                  <svg width="50" height="36" viewBox="0 0 50 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.1594 0.246826H25.4375C28.0063 0.256201 41.0219 0.349952 44.5313 1.2937C45.5922 1.58173 46.5589 2.14315 47.3349 2.92185C48.1108 3.70056 48.6688 4.66928 48.9531 5.7312C49.2688 6.9187 49.4906 8.49058 49.6406 10.1125L49.6719 10.4375L49.7406 11.25L49.7656 11.575C49.9688 14.4312 49.9938 17.1062 49.9969 17.6906V17.925C49.9938 18.5312 49.9656 21.3874 49.7406 24.3624L49.7156 24.6906L49.6875 25.0156C49.5313 26.8031 49.3 28.5781 48.9531 29.8843C48.6697 30.9467 48.112 31.9159 47.3359 32.6947C46.5598 33.4735 45.5926 34.0347 44.5313 34.3218C40.9063 35.2968 27.1281 35.3656 25.2188 35.3687H24.775C23.8094 35.3687 19.8156 35.35 15.6281 35.2062L15.0969 35.1875L14.825 35.1749L14.2906 35.1531L13.7563 35.1312C10.2875 34.9781 6.98438 34.7312 5.4625 34.3187C4.40153 34.0318 3.43458 33.4711 2.65851 32.6929C1.88245 31.9146 1.32452 30.9461 1.04063 29.8843C0.69375 28.5812 0.4625 26.8031 0.30625 25.0156L0.28125 24.6875L0.25625 24.3624C0.102024 22.2449 0.0165621 20.123 0 18L0 17.6156C0.00625 16.9437 0.03125 14.6218 0.2 12.0593L0.221875 11.7375L0.23125 11.575L0.25625 11.25L0.325 10.4375L0.35625 10.1125C0.50625 8.49058 0.728125 6.91558 1.04375 5.7312C1.32717 4.66885 1.88488 3.69967 2.66098 2.92083C3.43708 2.14199 4.40428 1.58086 5.46563 1.2937C6.9875 0.887452 10.2906 0.637451 13.7594 0.481201L14.2906 0.459326L14.8281 0.440577L15.0969 0.431202L15.6313 0.409327C18.6053 0.313622 21.5806 0.260491 24.5563 0.249951H25.1594V0.246826ZM20 10.2781V25.3343L32.9906 17.8093L20 10.2781Z" fill="currentColor" />
+                  </svg>
+                </a>
+              </li>
+              <li class="contacts__sheet">
+                <a class="contacts__link-bottom" href="#">
+                  <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.4024 0.166992H14.6191C2.94408 0.166992 0.166992 2.94408 0.166992 14.5982V27.3816C0.166992 39.0545 2.92324 41.8337 14.5982 41.8337H27.3816C39.0545 41.8337 41.8337 39.0774 41.8337 27.4024V14.6191C41.8337 2.94408 39.0774 0.166992 27.4024 0.166992ZM33.8045 29.8962H30.7649C29.6149 29.8962 29.2691 28.9649 27.2066 26.9024C25.4066 25.167 24.6462 24.9503 24.1899 24.9503C23.5607 24.9503 23.3878 25.1232 23.3878 25.992V28.7253C23.3878 29.4649 23.1482 29.8982 21.217 29.8982C19.3427 29.7723 17.5252 29.2029 15.9141 28.2369C14.303 27.2708 12.9444 25.9359 11.9503 24.342C9.59026 21.4045 7.94812 17.9569 7.15449 14.2732C7.15449 13.817 7.32741 13.4045 8.19616 13.4045H11.2337C12.0149 13.4045 12.2962 13.7524 12.6024 14.5545C14.0774 18.8962 16.5941 22.6712 17.6149 22.6712C18.0066 22.6712 18.1774 22.4982 18.1774 21.5212V17.0503C18.0482 15.0107 16.9649 14.8378 16.9649 14.1003C16.9788 13.9058 17.068 13.7244 17.2134 13.5944C17.3589 13.4645 17.5492 13.3964 17.7441 13.4045H22.5191C23.1712 13.4045 23.3878 13.7295 23.3878 14.5107V20.5441C23.3878 21.1962 23.6691 21.4128 23.8649 21.4128C24.2566 21.4128 24.5587 21.1962 25.2753 20.4795C26.8146 18.6023 28.0723 16.5109 29.0087 14.2712C29.1044 14.0021 29.2855 13.7718 29.5243 13.6153C29.7632 13.4588 30.0467 13.3848 30.3316 13.4045H33.3712C34.2816 13.4045 34.4753 13.8607 34.2816 14.5107C33.1763 16.9866 31.8088 19.3369 30.2024 21.5212C29.8753 22.0212 29.7441 22.2816 30.2024 22.867C30.5045 23.3232 31.5691 24.2128 32.2857 25.0587C33.3272 26.0975 34.1921 27.2994 34.8462 28.617C35.1066 29.4628 34.6712 29.8962 33.8045 29.8962Z" fill="currentColor" />
+                  </svg>
+                </a>
+              </li>
+              <li class="contacts__sheet">
+                <a class="contacts__link-bottom" href="#">
+                  <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.0003 0.166992C9.50033 0.166992 0.166992 9.50033 0.166992 21.0003C0.166992 32.5003 9.50033 41.8337 21.0003 41.8337C32.5003 41.8337 41.8337 32.5003 41.8337 21.0003C41.8337 9.50033 32.5003 0.166992 21.0003 0.166992ZM30.667 14.3337C30.3545 17.6253 29.0003 25.6253 28.3128 29.3128C28.0212 30.8753 27.4378 31.3962 26.8962 31.4587C25.6878 31.5628 24.7712 30.667 23.6045 29.8962C21.7712 28.6878 20.7295 27.9378 18.9587 26.7712C16.8962 25.417 18.2295 24.667 19.417 23.4587C19.7295 23.1462 25.0628 18.292 25.167 17.8545C25.1815 17.7882 25.1795 17.7194 25.1614 17.6541C25.1432 17.5887 25.1094 17.5288 25.0628 17.4795C24.9378 17.3753 24.7712 17.417 24.6253 17.4378C24.4378 17.4795 21.5212 19.417 15.8337 23.2503C15.0003 23.8128 14.2503 24.1045 13.5837 24.0837C12.8337 24.0628 11.417 23.667 10.3545 23.3128C9.04199 22.8962 8.02116 22.667 8.10449 21.9378C8.14616 21.5628 8.66699 21.1878 9.64616 20.792C15.7295 18.1462 19.7712 16.3962 21.792 15.5628C27.5837 13.1462 28.7712 12.7295 29.5628 12.7295C29.7295 12.7295 30.1253 12.7712 30.3753 12.9795C30.5837 13.1462 30.6462 13.3753 30.667 13.542C30.6462 13.667 30.6878 14.042 30.667 14.3337Z" fill="currentColor" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="contacts__map" id="myMap1"></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__content">
+        <p class="footer__desc">
+          &copy;&nbsp;2023 Пестовский Лесокомбинат. Все права защищены.
+        </p>
+        <div class="footer__average">
+          <a class="footer__link" href="#">Реквизиты</a>
+          <a class="footer__link" href="#">Политика конфиденциальности</a>
+        </div>
+        <div class="footer__logo-box">
+          <a class="footer__logo" href="#">
+            <img src="img/logoTwo.svg" alt="лого">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <form class="form" id="form">
+      <div class="form__header">
+        <div class="form__container-header container">
+          <button class="form__clos btn-reset" onclick="closeForm()">
+            <span class="form__line"></span>
+            <span class="form__line"></span>
+          </button>
+        </div>
+      </div>
+      <div class="form__main">
+        <div class="form__container-main container">
+          <h2 class="form__title title">
+            заполните анкету
+          </h2>
+          <ul class="form__items list-reset">
+            <li class="form__item" id="itemName">
+              <label class="form__label">
+                <input class="form__input name" type="text" name="name" id="name" placeholder="Ф.И.О">
+              </label>
+            </li>
+            <li class="form__item" id="itemPhone">
+              <label class="form__label">
+                <input class="form__input tel" type="tel" name="tel" id="phone" placeholder="Телефон">
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label-direction" for="direction">Отклик на&nbsp;вакансию</label>
+              <input class="form__input response" id="dropdownInput" type="text" name="direction" value="">
+              <button class="form__dropdown btn-reset" id="direction">
+                <span>Выберите вакансию</span>
+                <span></span>
+              </button>
+              <ul class="form__list list-reset" id="dropdownList">
+                <li class="form__choice" data-value="Строительный отдел">
+                  Строительный отдел
+                </li>
+                <li class="form__choice" data-value="офис">
+                  Офис
+                </li>
+                <li class="form__choice" data-value="финансовый отдел">
+                  Финансовый отдел
+                </li>
+                <li class="form__choice" data-value="Отдел продаж">
+                  Отдел продаж
+                </li>
+                <li class="form__choice" data-value="внештатный сотрудник">
+                  Внештатный сотрудник
+                </li>
+              </ul>
+            </li>
+            <li class="form__item">
+              <span class="label__desc-one">Ваше резюме</span>
+              <span class="label__desc-two">
+                Есть резюме в&nbsp;формате .pdf или .doc?
+              </span>
+              <span class="label__desc-two desc-two">
+                Приложите и&nbsp;отправьте его нам.
+              </span>
+              <label class="form__label label" id="addFile">
+                Загрузить файл
+                <input class ="label__input" type="file" name="resume" id="resume" accept=".pdf, .doc">
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label">
+                <input class="form__checkbox checkbox" name="checkbox" type="checkbox" id="formCheckbox">
+                <span class="form__checkbox-castom"></span>
+                <span>
+                  <span class="label__desc-two desc-one">
+                    Я&nbsp;прочитал(а), ознакомился(лась) и&nbsp;согласен(на) с&nbsp;Политикой конфиденциальности, Согласием на&nbsp;обработку персональных данных физическим лицом. Я&nbsp;осознаю, что даю Согласие на&nbsp;обработку персональных данных для использования предоставляемых возможностей Веб-сервиса.
+                  </span>
+                  <span class="label__desc-two">
+                    Я&nbsp;достиг(ла) 18-летнего возраста
+                  </span>
+                </span>
+              </label>
+            </li>
+            <li class="form__item">
+              <input class="form__submit btn btn-reset submit" id="submit" type="submit" value="ОТПРАВИТЬ АНКЕТУ">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="form__done done">
+        <div class="done__container container">
+          <h2 class="done__title title">
+            Анкета отправлена
+          </h2>
+          <img class="done__img" src="img/form/form_done.webp" alt="ОТПРАВЛЕНО">
+          <p class="done__desc one">
+            Благодарим за&nbsp;ваш отклик и&nbsp;интерес.
+          </p>
+          <p class="done__desc two">
+            Мы&nbsp;изучим вашу анкету и&nbsp;свяжемся с&nbsp;вами в&nbsp;течении 2х&nbsp;дней.
+          </p>
+          <a class="done__link btn" href="#hero" onclick="closeForm()">
+            на&nbsp;главную
+          </a>
+        </div>
+      </div>
+  </form>
+</body>
+</html>
